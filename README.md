@@ -1,0 +1,1 @@
+Simple landing page for egg-selling business. 
