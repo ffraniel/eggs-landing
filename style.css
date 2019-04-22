@@ -10,6 +10,22 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   height: 100vh;
+  transform: translate(0);
+  transition: transform 1s;
+}
+
+.container-meet {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  transform: translate(0);
+  transition: transform 1s;
+}
+
+.container-contact {
+  height: 100vh;
+  transform: translate(0);
+  transition: transform 1s;
 }
 
 .header {
@@ -72,11 +88,6 @@ body {
   margin: 0 auto;
 }
 
-.container  {
-  transform: translate(0);
-  transition: transform 1s;
-}
-
 .price span {
   color: rgb(28, 49, 25);
 }
@@ -96,8 +107,17 @@ body {
   color: rgb(0, 195, 255);
   background-color: rgba(255, 255, 255, 0.75);
   transition: background-color 0.25s, color 0.25s;
-  
 } 
+
+.contact-box {
+  background: rgb(236, 234, 119);
+  color: #038b48;
+  border-radius: 5px;
+  width: 300px;
+  margin: 70px auto;
+  padding: 10px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 650px) {
   .container {
