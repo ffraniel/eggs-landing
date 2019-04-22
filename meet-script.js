@@ -1,7 +1,6 @@
 const home = document.getElementById('home') || document.getElementById('meet-hens') || document.getElementById('contact-page');
 const meet = document.getElementById('meet');
 const contact = document.getElementById('contact');
-const meetButton = document.getElementById('meet-button')
 
 const navHome = document.getElementById('nav-home');
 const navMeet = document.getElementById('nav-meet');
@@ -26,7 +25,6 @@ const linkToMeet = (e) => {
 };
 
 navMeet.addEventListener('click', linkToMeet);
-meetButton.addEventListener('click', linkToMeet);
 
 const linkToContact = (e) => {
   e.preventDefault();
