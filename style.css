@@ -12,6 +12,33 @@ body {
   height: 100vh;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: rgb(236, 234, 119)
+}
+
+.nav {}
+
+.nav a {
+  background-color: rgba(255, 255, 255, 0.555);
+  color: #038b48;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.25s;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  color: rgb(0, 195, 255);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .image-box {
   grid-column: 1;
   overflow: hidden;
@@ -45,9 +72,32 @@ body {
   margin: 0 auto;
 }
 
+.container  {
+  transform: translate(0);
+  transition: transform 1s;
+}
+
 .price span {
   color: rgb(28, 49, 25);
 }
+
+.meet-button {
+  background-color: rgba(255, 255, 255, 0.555);
+  color: #038b48;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: background-color;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.meet-button:hover {
+  color: rgb(0, 195, 255);
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 0.25s, color 0.25s;
+  
+} 
 
 @media only screen and (max-width: 650px) {
   .container {
@@ -72,3 +122,6 @@ body {
   }
 }
 
+.slide-out {
+  transform: translate(-100vw);
+}

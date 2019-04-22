@@ -1,0 +1,19 @@
+{
+  "name": "egg-landing",
+  "version": "1.0.0",
+  "description": "Simple landing page for egg-selling business.",
+  "main": "hens-script.js",
+  "scripts": {
+    "start": "browser-sync start --server --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffraniel/eggs-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ffraniel/eggs-landing/issues"
+  },
+  "homepage": "https://github.com/ffraniel/eggs-landing#readme"
+}
