@@ -20,12 +20,17 @@ body {
   height: 100vh;
   transform: translate(0);
   transition: transform 1s;
+  
 }
 
 .container-contact {
   height: 100vh;
   transform: translate(0);
   transition: transform 1s;
+}
+
+.container-offscreen {
+  transform: translate(100vw);
 }
 
 .header {
