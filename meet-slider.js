@@ -1,26 +1,26 @@
 var app = new Vue({
-  el: '#card-slides',
+  el: '#meet-hens',
   data: {
     message: 'Hello Vue!',
     breeds: Chickens,
-    selectedBreed: 0,
+    selectedBreed: null,
     displayTitle: '',
-    displayText: ''
+    displayText: 'select one of the breeds to learn more',
+    displayImage: 'assets/outline.gif',
+    displayActive: false
   },
   mounted: function () {
-    this.displayText =this.breeds[this.selectedBreed].details;
-    this.displayTitle = this.breeds[this.selectedBreed].breed;
-    console.log(this.displayText)
-    console.log(this.displayTitle)
+
   },
   methods: {
     selectBreed: function (selected) {
+      if (this.displayActive === false) {
+        this.displayActive = true;
+      };
       this.selectedBreed = selected;
       this.displayTitle = this.breeds[selected].breed;
       this.displayText = this.breeds[selected].details;
-      console.log(this.selectedBreed)
-      console.log(this.displayTitle)
-        console.log(this.displayText)
+      this.displayImage = this.breeds[selected].img;
     }
   }
 });

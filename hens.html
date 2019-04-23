@@ -22,25 +22,28 @@
       </nav>
     </header>
     <div class="container-meet container-offscreen" id="meet-hens">
-      <h1 class="meet-title">Choose your Hen</h1>
+      <h1 class="meet-title">Meet the Hens</h1>
       <p class="meet-subtitle">Click on a bird to learn more</p>
-
-      <div id="card-slides">
-        <div class="card-slider-wrapper">
-          <div class="card" 
+      <section class="meet-grid">
+        <div id="card-slides">
+          <div class="card-slider-wrapper">
+            <div class="card" 
             v-for="(breed, i) in breeds" 
             @click="selectBreed(i)"
             v-bind:class="[i === selectedBreed ? 'highlighted-card': '']"
-          >
-            <img class="breed-image" v-bind:src="breed.img" v-bind:alt="breed.breed" />
-            <div class="breed-subset" >
-              <h3 class="breed-name">{{ breed.breed }}</h3>
-              <p class="breed-details">{{ breed.details }}</p>
-            </div>
+            >
+            <img class="breed-image" v-bind:src="breed.img" v-bind:alt="breed.breed" />      
           </div>
         </div>
-    </div>
-
+      </div>
+      <div class="breed-selection" >
+        <img class="breed-selection-image" v-bind:src="this.displayImage" v-bind:alt="this.displayTitle" />      
+        <h3 class="breed-name" v-if="displayActive">{{ this.displayTitle }}</h3>
+        <p class="breed-details">{{ this.displayText }}</p>
+      </div>
+      
+    </section>
+    
     <!-- dev -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
     <!-- live
