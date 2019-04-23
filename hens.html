@@ -22,9 +22,33 @@
       </nav>
     </header>
     <div class="container-meet container-offscreen" id="meet-hens">
-      <h1>Meet the Hens</h1>
+      <h1 class="meet-title">Choose your Hen</h1>
+      <p class="meet-subtitle">Click on a bird to learn more</p>
+
+      <div id="card-slides">
+        <div class="card-slider-wrapper">
+          <div class="card" 
+            v-for="(breed, i) in breeds" 
+            @click="selectBreed(i)"
+            v-bind:class="[i === selectedBreed ? 'highlighted-card': '']"
+          >
+            <img class="breed-image" v-bind:src="breed.img" v-bind:alt="breed.breed" />
+            <div class="breed-subset" >
+              <h3 class="breed-name">{{ breed.breed }}</h3>
+              <p class="breed-details">{{ breed.details }}</p>
+            </div>
+          </div>
+        </div>
     </div>
 
-    <script src="meet-script.js" async defer></script>
+    <!-- dev -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+    <!-- live
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> -->
+
+    <script src="./data/Chickens.js" defer></script>
+    <script src="meet-script.js" defer></script>
+    <script src="meet-slider.js" defer></script>
+
   </body>
 </html>
