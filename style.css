@@ -37,7 +37,8 @@ body {
   left: 0;
   width: 100%;
   z-index: 2;
-  background: rgb(236, 234, 119)
+  background: rgb(236, 234, 119);
+  box-shadow: 0px 1px 5px 1px #cdd832ad;
 }
 
 .nav a {
@@ -227,9 +228,6 @@ body {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-  }
-  .nav {
-
   }
   .nav a {
     font-size: 0.9rem;
