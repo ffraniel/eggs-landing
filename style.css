@@ -39,7 +39,9 @@ body {
   background: rgb(236, 234, 119)
 }
 
-.nav {}
+.nav {
+  height: 40px;
+}
 
 .nav a {
   background-color: rgba(255, 255, 255, 0.555);
@@ -91,7 +93,7 @@ body {
 }
 
 .price span {
-  color: rgb(28, 49, 25);
+  color: rgb(255, 255, 255);
 }
 
 .meet-button {
@@ -135,14 +137,21 @@ body {
   text-align: center;
   padding: 30px;
   border-radius: 6px;
-  color: #038b48;
+  color: #157b49;
   text-shadow: 2px 4px 3px #12558547;
+  /* background: #8ce68359; */
+  margin-top: 20px;
+  border-radius: 6px
 }
 
 .breed-selection-image {
   max-width: 350px;
   height: 350px;
-  border-radius: 20%;
+  border-radius: 2%;
+}
+
+.breed-details {
+  text-shadow: 1px 3px 2px #0000001e;
 }
 
 #card-slides {
@@ -182,6 +191,7 @@ body {
 .breed-image {
   max-width: 200px;
   height: 200px;
+  border-radius: 4px;
 }
 
 .breed-details {
