@@ -149,9 +149,9 @@ body {
   border-radius: 6px;
   color: #157b49;
   text-shadow: 2px 4px 3px #12558547;
-  /* background: #8ce68359; */
   margin-top: 20px;
-  border-radius: 6px
+  opacity: 1;
+  transition: opacity 100ms ease-in;
 }
 
 .breed-selection-image {
@@ -165,7 +165,7 @@ body {
 }
 
 #card-slides {
-  padding: 15px
+  padding: 15px;
 }
 
 .card-slider-wrapper {
@@ -230,6 +230,10 @@ body {
 
 .slide-out {
   transform: translate(-100vw);
+}
+
+.faded {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1010px) {

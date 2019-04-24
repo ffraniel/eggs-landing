@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="breed-selection" >
+      <div class="breed-selection" v-bind:class="{ faded: isFaded }">
         <img class="breed-selection-image" v-bind:src="this.displayImage" v-bind:alt="this.displayTitle" />      
         <h2 class="breed-name" v-if="displayActive">{{ this.displayTitle }}</h2>
         <p class="breed-details">{{ this.displayText }}</p>

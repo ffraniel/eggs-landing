@@ -7,20 +7,25 @@ var app = new Vue({
     displayTitle: '',
     displayText: 'select one of the breeds to learn more',
     displayImage: 'assets/outline.gif',
-    displayActive: false
-  },
-  mounted: function () {
-
+    displayActive: false,
+    isFaded: false
   },
   methods: {
     selectBreed: function (selected) {
       if (this.displayActive === false) {
         this.displayActive = true;
       };
-      this.selectedBreed = selected;
-      this.displayTitle = this.breeds[selected].breed;
-      this.displayText = this.breeds[selected].details;
-      this.displayImage = this.breeds[selected].img;
+      // add fade out
+      this.isFaded = true;
+      //make changes after animation
+      setTimeout(() => {
+        this.selectedBreed = selected;
+        this.displayTitle = this.breeds[selected].breed;
+        this.displayText = this.breeds[selected].details;
+        this.displayImage = this.breeds[selected].img;
+        // remove fade out
+        this.isFaded = false;
+      }, 200);
     }
   }
 });
