@@ -82,6 +82,7 @@ body {
   background: rgb(236, 234, 119);
   color: #038b48;
   text-align: center;
+  box-shadow: 3px 3px 1px 1px #6f6f6f2e;
 }
 .detail-panel-whitebox p {
   font-size: 0.9rem;
@@ -203,9 +204,19 @@ body {
   color: #038b48;
   border-radius: 5px;
   width: 300px;
-  margin: 70px auto;
-  padding: 10px;
+  padding: 20px 0;
   text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 1px 1px #6f6f6f2e;
+}
+
+.contact-box > * {
+  max-width: 80%;
+  margin: 15px auto;
 }
 
 @media only screen and (max-width: 650px) {
