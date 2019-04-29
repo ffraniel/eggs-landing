@@ -15,9 +15,6 @@ p {
 }
 
 .container {
-  /* display: grid;
-  grid-template-columns: 50% 50%; */
-  height: 100vh;
   transform: translate(0);
   transition: transform 1s;
   animation: fadein 0.5s;
@@ -193,7 +190,6 @@ p {
 
 .button-container {
   margin-top: 20px;
-  text-align: center;
 }
 
 .meet-button {
@@ -429,6 +425,18 @@ p {
 }
 
 @media only screen and (max-width: 1010px) {
+  .nav a {
+    font-size: 0.95rem;
+    padding: 5px 5px;
+  }
+  #nav-title {
+    font-size: 2rem;
+  }
+  .image-overlay-text {
+    top: 60px;
+    padding: 0 50px;
+  }
+
   .card {
     width: 140px;
     height: 140px;
@@ -445,6 +453,20 @@ p {
 }
 
 @media only screen and (max-width: 870px) {
+  .nav a {
+    font-size: 0.9rem;
+    padding: 5px 5px;
+    text-align: center;
+  }
+  #nav-title {
+    font-size: 1.5rem;
+  }
+  .image-overlay-text {
+    top: 60px;
+    padding: 0 15px;
+    font-size: 4.5rem;
+  }
+
   .card {
     width: 100px;
     height: 100px;
@@ -460,39 +482,13 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-  .container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-  }
-  .nav a {
-    font-size: 0.9rem;
-    margin: 5px;
-    padding: 5px 10px;
-    flex: 1;
+  .image-overlay-text {
+    top: 40px;
+    padding: 0;
+    font-size: 3.5rem;
+    width: 90%;
     text-align: center;
-    vertical-align: center;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-  }
-  .image-box {
-    display: none;
-  }
-  .detail-panel {
-    grid-column: 1;
-  }
-  .detail-panel-whitebox {
-    width: 75vw;
-    height: 65vh;
-    min-height: auto;
-    background: rgb(236, 234, 119);
-    color: #038b48;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  .button-container {
-    padding: 10px;
+    width: 100%;
   }
   .card {
     width: 90px;
@@ -513,5 +509,17 @@ p {
     max-height: 65vh;
     min-height: 45vh;
     padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .image-overlay-text {
+    top: 40px;
+    font-size: 2.8rem;
+    margin: auto;
+  }
+
+  .image-box {
+    height: 450px;
   }
 }
