@@ -5,6 +5,11 @@ body {
   border: 50px white solid;
 }
 
+:root {
+  --eggPink: #fcac91;
+  --textBlack: rgba(24, 22, 22, 0.925);
+}
+
 p {
   font-size: 0.9rem;
 }
@@ -24,9 +29,12 @@ p {
 }
 
 .container-meet {
-  height: 100vh;
+  min-height: 100vh;
   transform: translate(0);
   transition: transform 1s;
+  background-color: #f5fcff;
+  /* background-image: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox='0 0 32 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0v3.994C14 7.864 10.858 11 7 11c-3.866 0-7-3.138-7-7.006V0h2v4.005C2 6.765 4.24 9 7 9c2.756 0 5-2.236 5-4.995V0h2zm0 26v-5.994C14 16.138 10.866 13 7 13c-3.858 0-7 3.137-7 7.006V26h2v-6.005C2 17.235 4.244 15 7 15c2.76 0 5 2.236 5 4.995V26h2zm2-18.994C16 3.136 19.142 0 23 0c3.866 0 7 3.138 7 7.006v9.988C30 20.864 26.858 24 23 24c-3.866 0-7-3.138-7-7.006V7.006zm2-.01C18 4.235 20.244 2 23 2c2.76 0 5 2.236 5 4.995v10.01C28 19.765 25.756 22 23 22c-2.76 0-5-2.236-5-4.995V6.995z' fill='%23c9f9fd' fill-opacity='0.65' fill-rule='evenodd'/%3E%3C/svg%3E"); */
+
 }
 
 .container-contact {
@@ -67,7 +75,7 @@ p {
   margin: 5px;
   border-radius: 2px;
   padding: 5px 10px;
-  color: rgba(24, 22, 22, 0.925);
+  color: var(--textBlack);
   background-color: rgba(255, 255, 255, 0.01);
   letter-spacing: 2px;
 }
@@ -127,10 +135,6 @@ p {
 
 .detail-panel {
   margin: 50px 0;
-  /* background-color: #c7f0ff;
-  background-color: #dff6ff;
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffbf8d' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-   */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -171,6 +175,11 @@ p {
 
 .details-title {
   text-transform: uppercase;
+  color: var(--eggPink)
+}
+
+.price {
+  color: var(--eggPink);
 }
 
 .price span {
@@ -190,10 +199,9 @@ p {
   text-decoration: none;
   transition: background-color 0.25s, color 0.25s;
   margin: 5px;
-  color: rgba(24, 22, 22, 0.925);
+  color: var(--textBlack);
   background-color: rgba(255, 255, 255, 0.01);
   letter-spacing: 2px;
-  /* box-shadow: 0px 0px 3px 0px #4f515696 */
 }
 
 .meet-button:hover {
@@ -202,16 +210,23 @@ p {
 } 
 
 .meet-title {
-  margin-top: 65px;
+  margin: 0;
+  margin-top: 30px;
   text-align: center;
-  color: #038b48;
-  text-shadow: 2px 4px 3px #12558547;
+  color: var(--textBlack);
+  text-shadow: 2px 4px 3px 1px var(--textBlack);
+  color: var(--eggPink);
+  font-size: 4rem;
 }
 
 .meet-subtitle {
   text-align: center;
-  color: #038b48;
-  text-shadow: 2px 4px 3px #12558547;
+  color: var(--textBlack);
+  text-shadow: 2px 4px 3px 1px var(--textBlack);
+  color: var(--eggPink);
+  font-size: 1rem;
+  font-weight: 300;
+
 }
 
 .meet-grid {
@@ -222,11 +237,13 @@ p {
 }
 
 .breed-selection {
+  font-weight: 300;
   text-align: center;
   padding: 30px;
   border-radius: 6px;
-  color: #157b49;
-  text-shadow: 2px 4px 3px #12558547;
+  color: var(--textBlack);
+  background: rgba(255, 253, 253, 0.575);
+  text-shadow: 2px 4px 3px 1px rgb(255, 254, 254);
   margin-top: 20px;
   opacity: 1;
   transition: opacity 100ms ease-in;
@@ -236,10 +253,6 @@ p {
   max-width: 350px;
   height: 350px;
   border-radius: 2%;
-}
-
-.breed-details {
-  text-shadow: 1px 3px 2px #0000001e;
 }
 
 #card-slides {
@@ -256,8 +269,8 @@ p {
   border-radius: 6px;
   padding: 20px;
   text-align: center;
-  background-color: rgb(241, 240, 159);
-  color: #038b48;
+  background-color: rgb(245, 247, 255);
+  background-color: white;
   flex: 1;
   align-items: stretch;
   opacity: 0.8;
@@ -266,8 +279,7 @@ p {
 }
 
 .card:hover {
-  background-color: rgb(245, 243, 131);
-  
+  background-color: rgb(233, 237, 252);
 }
 
 .highlighted-card {
@@ -292,6 +304,10 @@ p {
   text-align: center;
   margin: 0;
   margin-top: 30px;
+}
+
+.contact-heading {
+  color: var(--eggPink);
 }
 
 .contact-details {
