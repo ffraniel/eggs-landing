@@ -82,10 +82,6 @@ p {
   background-color: rgba(250, 250, 250, 0.90);
 }
 
-.primary-nav {
-
-}
-
 .nav-title-link {
   font-size: 1.5rem;
   font-weight: 700;
@@ -142,7 +138,6 @@ p {
 }
 
 .detail-panel-whitebox {
-  padding: 30px 0;
   background: white;
   color: rgb(12, 12, 12);
   padding: 30px 50px;
@@ -177,11 +172,13 @@ p {
 
 .details-title {
   text-transform: uppercase;
-  color: var(--eggPink)
+  color: var(--eggPink);
+  font-size: 2rem;
 }
 
 .price {
   color: var(--eggPink);
+  font-size: 1.3rem;
 }
 
 .price span {
@@ -195,7 +192,7 @@ p {
 .meet-button {
   text-decoration: none;
   border-radius: 2px;
-  padding: 5px 10px;
+  padding: 5px 0;
   font-size: 1rem;
   text-decoration: none;
   transition: background-color 0.25s, color 0.25s;
@@ -443,6 +440,28 @@ p {
     top: 60px;
     padding: 0 50px;
   }
+  .meet-button {
+    font-size: 0.95rem;
+  }
+
+  .detail-panel {
+    display: block;
+  }
+  
+  .image-container {
+    display: none;
+  }
+
+  .price {
+    text-align: center;
+  }
+  .detail-panel-whitebox .contact {
+    text-align: center;
+  }
+
+  .detail-panel-whitebox .button-container {
+    text-align: center;
+  }
 
   .card {
     width: 140px;
@@ -474,6 +493,14 @@ p {
     font-size: 4.5rem;
   }
 
+  .detail-panel {
+    margin: 10px 0;
+  }
+
+  .detail-panel-whitebox {
+    padding: 15px 30px;
+  }
+
   .card {
     width: 100px;
     height: 100px;
@@ -497,6 +524,16 @@ p {
     text-align: center;
     width: 100%;
   }
+  .detail-panel-whitebox {
+    padding: 5px;
+  }
+  .detail-panel-whitebox .details-title {
+    text-align: center;
+  }
+  .detail-panel-whitebox .details {
+    text-align: center;
+  }
+  
   .card {
     width: 90px;
     height: 90px;
