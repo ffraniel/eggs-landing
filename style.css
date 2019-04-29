@@ -5,6 +5,10 @@ body {
   border: 50px white solid;
 }
 
+p {
+  font-size: 0.9rem;
+}
+
 .container {
   /* display: grid;
   grid-template-columns: 50% 50%; */
@@ -29,6 +33,7 @@ body {
   height: 100vh;
   transform: translate(0);
   transition: transform 1s;
+
 }
 
 .container-offscreen {
@@ -282,18 +287,15 @@ body {
 }
 
 .contact-box {
-  background: rgb(236, 234, 119);
-  color: #038b48;
-  border-radius: 5px;
-  width: 300px;
+  color: rgb(14, 14, 14);
   padding: 20px 0;
   text-align: center;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 3px 3px 1px 1px #6f6f6f2e;
+  margin-top: 30px;
+}
+
+.contact-details {
+  font-weight: 300;
 }
 
 .contact-box > * {
