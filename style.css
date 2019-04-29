@@ -238,9 +238,8 @@ p {
 
 .gallery {
   margin: 25px auto;
-  max-width: 90%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(250px, 1fr) );
   grid-gap: 25px;
 
 }
@@ -467,6 +466,18 @@ p {
     font-size: 4.5rem;
   }
 
+  .gallery {
+    margin: 0px auto;
+    grid-template-columns: repeat(2, minmax(250px, 1fr) );
+    grid-gap: 20px;
+  }
+  
+  .gallery-title {
+    grid-column: 1/3;
+    color: var(--textBlack);
+    font-size: 2rem;
+  }
+
   .card {
     width: 140px;
     height: 140px;
@@ -522,6 +533,18 @@ p {
     font-size: 1rem;
   }
 
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .footer-nav {
+    padding: 0 10px;
+  }
+  
+  .footer-nav-link {
+    font-size: 0.9rem;
+  }
+
   .card {
     width: 100px;
     height: 100px;
@@ -572,7 +595,25 @@ p {
     font-size: 1rem;
   }
 
-  
+  .gallery {
+    display: block;
+  }
+
+  .gallery-image-box {
+    margin-bottom: -10px;
+
+  }
+
+  .gallery-image {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+
+  .footer-nav {
+    padding: 0px 0px;
+  }
+
   .card {
     width: 90px;
     height: 90px;
@@ -617,6 +658,11 @@ p {
   
   .location-text {
     font-size: 0.9rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
   }
   
 }
