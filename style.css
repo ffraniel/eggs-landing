@@ -219,6 +219,29 @@ p {
   margin: 25px 0;
 }
 
+.location {
+  padding: 20px;
+  text-align: center;
+  color: var(--textBlack);
+  margin: 25px 0;
+}
+
+.location > * {
+  max-width: 65%;
+  margin: 10px auto;
+}
+
+.location-title {
+  font-size: 2rem;
+  text-align: left;
+  color: var(--eggPink);
+}
+
+.location-text {
+  font-weight: 300;
+  text-align: left;
+}
+
 .meet-title {
   margin: 0;
   margin-top: 30px;
