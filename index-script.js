@@ -2,6 +2,7 @@ const home = document.getElementById('home') || document.getElementById('meet-he
 const meet = document.getElementById('meet');
 const contact = document.getElementById('contact');
 const meetButton = document.getElementById('meet-button')
+const findOutBuy = document.getElementById('buy-button');
 
 const navHome = document.getElementById('nav-home');
 const navMeet = document.getElementById('nav-meet');
@@ -37,3 +38,4 @@ const linkToContact = (e) => {
 };
 
 navContact.addEventListener('click', linkToContact);
+findOutBuy.addEventListener('click', linkToContact);
