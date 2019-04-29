@@ -243,6 +243,41 @@ p {
   font-size: 1.1rem;
 }
 
+.gallery {
+  margin: 25px auto;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-gap: 25px;
+
+}
+
+.gallery-title {
+  grid-column: 1/4;
+  color: var(--textBlack);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.gallery-image-box {
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 300px;
+  width: auto;
+  height: 280px;
+  object-fit: contain;
+
+  filter: brightness(75%);
+  transition: filter 0.3s;
+  border-radius: 3px;
+}
+
+.gallery-image:hover {
+  filter: brightness(100%);
+}
+
 .meet-title {
   margin: 0;
   margin-top: 30px;
