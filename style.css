@@ -232,7 +232,7 @@ p {
 }
 
 .location-title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: left;
   color: var(--eggPink);
 }
@@ -240,6 +240,7 @@ p {
 .location-text {
   font-weight: 300;
   text-align: left;
+  font-size: 1.1rem;
 }
 
 .meet-title {
