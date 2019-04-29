@@ -127,8 +127,8 @@ p {
 }
 
 .add-top {
-  top: 120px;
-  padding: 0 120px;
+  top: 80px;
+  padding: 0 80px;
 }
 
 .detail-panel {
@@ -261,7 +261,6 @@ p {
   width: auto;
   height: 280px;
   object-fit: contain;
-
   filter: brightness(75%);
   transition: filter 0.3s;
   border-radius: 3px;
@@ -452,6 +451,7 @@ p {
     display: none;
   }
 
+
   .price {
     text-align: center;
   }
@@ -461,6 +461,10 @@ p {
 
   .detail-panel-whitebox .button-container {
     text-align: center;
+  }
+  .add-top {
+    top: 60px;
+    font-size: 4.5rem;
   }
 
   .card {
@@ -501,6 +505,23 @@ p {
     padding: 15px 30px;
   }
 
+  .add-top {
+    top: 3%;
+    font-size: 4rem;
+  }
+  
+  .location > * {
+    max-width: 75%;
+  }
+  
+  .location-title {
+    font-size: 2.5rem;
+  }
+  
+  .location-text {
+    font-size: 1rem;
+  }
+
   .card {
     width: 100px;
     height: 100px;
@@ -533,6 +554,24 @@ p {
   .detail-panel-whitebox .details {
     text-align: center;
   }
+
+  .add-top {
+    top: 0;
+    font-size: 3.5rem;
+  }
+
+  .location > * {
+    max-width: 100%;
+  }
+  
+  .location-title {
+    font-size: 2.3rem;
+  }
+  
+  .location-text {
+    font-size: 1rem;
+  }
+
   
   .card {
     width: 90px;
@@ -566,4 +605,18 @@ p {
   .image-box {
     height: 450px;
   }
+
+  .add-top {
+    top: 0;
+    font-size: 2.6rem;
+  }
+  
+  .location-title {
+    font-size: 2rem;
+  }
+  
+  .location-text {
+    font-size: 0.9rem;
+  }
+  
 }
