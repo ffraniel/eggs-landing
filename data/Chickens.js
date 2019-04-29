@@ -2,7 +2,7 @@ const Chickens = [
   {
     index: 0,
     breed: "Araucana",
-    img: "assets/ARAC.jpeg",
+    img: "assets/ARAC2.jpg",
     details: "The Araucana (Spanish: Gallina Mapuche) is a breed of domestic chicken from Chile. Its name derives from the Araucanía region of Chile where it is believed to have originated. It lays blue-shelled eggs, one of very few breeds that do so."
   },
   {

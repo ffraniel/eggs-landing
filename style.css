@@ -144,9 +144,6 @@ p {
   font-weight: 300;
 }
 
-.image-container {
-}
-
 .smaller-image {
   object-fit: fill;
   width: 100%;
@@ -241,7 +238,6 @@ p {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr) );
   grid-gap: 25px;
-
 }
 
 .gallery-title {
@@ -560,6 +556,30 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
+  .nav-mobile-burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: solid red 1px;
+    border-radius: 3px;
+    height: 50px;
+    width: 50px;
+    background: grey;
+  }
+  
+  .nav-title-link {
+    font-size: 1rem;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+  
+  .secondary-nav {
+    display: none;
+  }
+  
   .image-overlay-text {
     top: 40px;
     padding: 0;
@@ -614,6 +634,10 @@ p {
     padding: 0px 0px;
   }
 
+  .meet-grid {
+    width: 100%;
+  }
+
   .card {
     width: 90px;
     height: 90px;
@@ -626,6 +650,10 @@ p {
     max-width: 180px;
     height: 180px;
   }
+
+  
+
+
   .contact-box {
     border-radius: 5px;
     width: 300px;
