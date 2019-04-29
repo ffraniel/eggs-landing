@@ -12,6 +12,12 @@ body {
   height: 100vh;
   transform: translate(0);
   transition: transform 1s;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .container-meet {
@@ -32,30 +38,53 @@ body {
 
 .nav {
   display: flex;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 2;
   background: rgb(236, 234, 119);
-  box-shadow: 0px 1px 5px 1px #cdd832ad;
+  background: #fbbf8c;
+  background: #2e3036;
+  box-shadow: 0px 1px 5px 1px #a8909091;
 }
 
 .nav a {
   background-color: rgba(255, 255, 255, 0.555);
+  background-color: rgba(255, 255, 255, 0.205);
   color: #038b48;
+  /* color: #0b4d64; */
   font-weight: 900;
   font-size: 1.3rem;
   text-decoration: none;
   transition: background-color 0.25s, color 0.25s;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 5px 10px;
+  color: rgb(236, 233, 233);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+#logo {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-left: auto;
+  width: 80px;
+}
+
+.logo-image {
+  filter: invert(1);
+  transition: filter 0.25s;
+  height: 25px;
+}
+#logo:hover .logo-image {
+  filter: invert(0);
 }
 
 .nav a:hover {
   color: rgb(0, 195, 255);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(170, 170, 170, 0.75);
 }
 
 .image-box {
@@ -98,7 +127,7 @@ body {
 }
 
 .price span {
-  color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.466);
 }
 
 .button-container {
