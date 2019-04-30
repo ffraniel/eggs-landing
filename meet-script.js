@@ -37,3 +37,34 @@ const linkToContact = (e) => {
 };
 
 navContact.addEventListener('click', linkToContact);
+
+//// mobile navigation ////
+
+const mobileToggle = document.querySelector('.mobile-nav-burger');
+const mobileNav = document.querySelector('.mobile-nav');
+const closeNav = document.querySelector('.close-nav');
+const mobileNavLinks = document.querySelectorAll('.mob-nav');
+
+mobileNavLinks.forEach((mobNav) => {
+  mobNav.addEventListener('click', (e)=>{
+    e.preventDefault();
+    mobileNav.classList.toggle('open-nav');
+    setTimeout(() => {
+      if(mobNav.id === 'nav-meet') {
+        window.location.href = 'hens.html';
+      } else if (mobNav.id === 'nav-home') {
+        window.location.href = 'index.html';
+      } else if (mobNav.id === 'nav-contact') {
+        window.location.href = 'contact.html';
+      };
+    }, 500);
+  });
+});
+
+closeNav.addEventListener('click', ()=> {
+  mobileNav.classList.toggle('open-nav');
+})
+
+mobileToggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('open-nav');
+});

@@ -89,6 +89,7 @@ p {
   justify-content: space-around;
   text-transform: uppercase;
 }
+
 #nav-title {
   font-size: 2.2rem;
 }
@@ -96,6 +97,14 @@ p {
 .secondary-nav {
   display: flex;
   justify-content: flex-end;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-burger {
+  display: none;
 }
 
 .image-box {
@@ -609,16 +618,59 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
-  .nav-mobile-burger {
+  .mobile-nav-burger {
     display: block;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    border: solid red 1px;
+    top: 15px;
+    left: 15px;
     border-radius: 3px;
-    height: 50px;
-    width: 50px;
-    background: grey;
+    height: 40px;
+    width: 40px;
+    background-color: darkgray;
+    transition: background-color 0.25s;
+  }
+
+  .mobile-nav-burger:hover {
+    background-color:  rgb(175, 175, 175);
+  }
+
+  .mobile-nav-burger span {
+    border: 1px white solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20% auto;
+    display: block;
+  }
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    background: rgba(255, 255, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    left: 0;
+    height: 100vh;
+    transform: translate(0, -100%);
+    transition: transform 0.5s;
+  }
+
+  .mobile-nav a {
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  .mobile-nav a:hover {
+    background: pink;
+  }
+
+  .mobile-nav.open-nav {
+    transform: translate(0, 0%);
+  }
+  .close-nav {
+    font-size: 7rem;
   }
   
   .nav-title-link {
