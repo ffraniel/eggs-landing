@@ -266,7 +266,7 @@ p {
 }
 
 .footer {
-  background: #f5fcff;
+  background: #e9f3f7;
   width: 100%;
   min-height: 100px;
   position: absolute;
@@ -303,6 +303,16 @@ p {
   background-color: rgba(250, 250, 250, 0.986);
   background-color: rgb(221, 238, 253);
 }
+
+.webdev-link {
+  font-size: 0.65rem;
+  position: absolute;
+  right: 50px;
+  bottom: 5px;
+  text-align: center;
+  width: 100px;
+}
+
 
 .meet-title {
   margin: 0;
@@ -539,6 +549,11 @@ p {
   
   .footer-nav-link {
     font-size: 0.9rem;
+  }
+
+  .webdev-link {
+    font-size: 0.65rem;
+    right: 5px;
   }
 
   .card {
