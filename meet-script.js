@@ -50,11 +50,11 @@ mobileNavLinks.forEach((mobNav) => {
     e.preventDefault();
     mobileNav.classList.toggle('open-nav');
     setTimeout(() => {
-      if(mobNav.id === 'nav-meet') {
+      if(mobNav.id === 'mob-nav-meet') {
         window.location.href = 'hens.html';
-      } else if (mobNav.id === 'nav-home') {
+      } else if (mobNav.id === 'mob-nav-home') {
         window.location.href = 'index.html';
-      } else if (mobNav.id === 'nav-contact') {
+      } else if (mobNav.id === 'mob-nav-contact') {
         window.location.href = 'contact.html';
       };
     }, 500);
