@@ -647,7 +647,7 @@ p {
     position: fixed;
     top: 0;
     z-index: 4;
-    background: rgba(255, 255, 0, 0.9);
+    background: #fcac91f3;
     width: 100%;
     text-align: center;
     left: 0;
@@ -660,7 +660,8 @@ p {
     display: block;
     text-decoration: none;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 4rem;
+    color: rgb(216, 240, 255);
   }
   .mobile-nav a:hover {
     background: pink;
@@ -668,9 +669,6 @@ p {
 
   .mobile-nav.open-nav {
     transform: translate(0, 0%);
-  }
-  .close-nav {
-    font-size: 7rem;
   }
   
   .nav-title-link {
