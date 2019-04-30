@@ -136,7 +136,7 @@ p {
 }
 
 .add-top {
-  top: 80px;
+  top: 0px;
   padding: 0 80px;
 }
 
@@ -479,6 +479,13 @@ p {
   opacity: 0;
 }
 
+@media only screen and (min-width: 980px) and (max-width: 1100px) {
+  .add-top {
+    top: -40px;
+    font-size: 4.5rem;
+  }
+}
+
 @media only screen and (max-width: 1010px) {
   .nav a {
     font-size: 0.95rem;
@@ -515,8 +522,8 @@ p {
     text-align: center;
   }
   .add-top {
-    top: 60px;
     font-size: 4.5rem;
+    top: -40px;
   }
 
   .gallery {
@@ -570,7 +577,7 @@ p {
   }
 
   .add-top {
-    top: 3%;
+    top: -40px;
     font-size: 4rem;
   }
   
@@ -702,7 +709,7 @@ p {
   }
 
   .add-top {
-    top: 0;
+    top: -40px;
     font-size: 3.5rem;
   }
 
@@ -765,6 +772,13 @@ p {
     max-height: 65vh;
     min-height: 45vh;
     padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 510px) and (min-width: 480px) {
+  .add-top {
+    top: -40px;
+    font-size: 3rem;
   }
 }
 
