@@ -8,6 +8,10 @@ const navHome = document.getElementById('nav-home');
 const navMeet = document.getElementById('nav-meet');
 const navContact = document.getElementById('nav-contact');
 
+const mobNavHome = document.querySelector('#mob-nav-home');
+const mobNavMeet = document.querySelector('#mob-nav-meet');
+const mobNavContact = document.querySelector('#mob-nav-contact');
+
 const linkToHome = (e) => {
   e.preventDefault();
   home.classList.add('slide-out');
@@ -39,6 +43,7 @@ const linkToContact = (e) => {
 
 navContact.addEventListener('click', linkToContact);
 findOutBuy.addEventListener('click', linkToContact);
+
 
 //// mobile navigation ////
 
