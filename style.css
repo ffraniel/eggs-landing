@@ -313,6 +313,44 @@ p {
   width: 100px;
 }
 
+.lightbox-container.open {
+  display: flex;
+}
+
+.lightbox-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--eggPink);
+  background-color: rgba(19, 18, 18, 0.6);
+  animation: fadein 0.25s;
+}
+.lightbox {
+  padding: 20px;
+  background: whitesmoke;
+}
+.lightbox-image {
+  width: 75vw;
+  height: auto;
+  max-height: 95vh;
+}
+.close-button {
+  color: whitesmoke;
+  font-size: 3rem;
+  position: fixed;
+  right: 50px;
+  top: 10px;
+}
+
+.close-button:hover {
+  color: white;
+}
 
 .meet-title {
   margin: 0;
@@ -665,9 +703,6 @@ p {
     max-width: 180px;
     height: 180px;
   }
-
-  
-
 
   .contact-box {
     border-radius: 5px;

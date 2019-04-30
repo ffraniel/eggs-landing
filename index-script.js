@@ -39,3 +39,18 @@ const linkToContact = (e) => {
 
 navContact.addEventListener('click', linkToContact);
 findOutBuy.addEventListener('click', linkToContact);
+
+const galleryImages = document.querySelectorAll('.gallery-image');
+const lightboxContainer = document.querySelector('.lightbox-container');
+const lightboxImage = document.querySelector('.lightbox-image');
+
+galleryImages.forEach((image)=>{
+  image.addEventListener('click', () => {
+    lightboxImage.src = image.src;
+    lightboxContainer.classList.add('open');
+  });
+});
+
+lightboxContainer.addEventListener('click', () => {
+    lightboxContainer.classList.remove('open');
+});
