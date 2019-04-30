@@ -741,6 +741,10 @@ p {
     width: 100%;
   }
 
+  .breed-selection {
+    margin-top: 0px;
+  }
+
   .card {
     width: 90px;
     height: 90px;
@@ -791,6 +795,29 @@ p {
   .gallery {
     grid-template-columns: 1fr;
     grid-gap: 5px;
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+  }
+  .breed-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  #card-slides {
+    padding: 5px;
+  }
+
+  .breed-selection {
+    padding: 10px;
+  }
+
+  .breed-selection-image {
+    max-width: 160px;
+    height: 160px;
   }
   
 }
