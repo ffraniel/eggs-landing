@@ -1,4 +1,7 @@
-const home = document.getElementById('home') || document.getElementById('meet-hens') || document.getElementById('contact-page');
+const home = 
+  document.getElementById('home') || 
+  document.getElementById('meet-hens') || 
+  document.getElementById('contact-page');
 const meet = document.getElementById('meet');
 const contact = document.getElementById('contact');
 
@@ -16,8 +19,6 @@ const linkToHome = (e) => {
   }, 1000);
 };
 
-navHome.addEventListener('click', linkToHome);
-
 const linkToMeet = (e) => {
   e.preventDefault();
   home.classList.add('slide-out');
@@ -25,8 +26,6 @@ const linkToMeet = (e) => {
     window.location.href = navMeet.href;
   }, 1000);
 };
-
-navMeet.addEventListener('click', linkToMeet);
 
 const linkToContact = (e) => {
   e.preventDefault();
@@ -36,9 +35,16 @@ const linkToContact = (e) => {
   }, 1000);
 };
 
+navHome.addEventListener('click', linkToHome);
+
+navMeet.addEventListener('click', linkToMeet);
+
 navContact.addEventListener('click', linkToContact);
 
 //// mobile navigation ////
+const mobNavHome = document.querySelector("#mob-nav-home");
+const mobNavMeet = document.querySelector("#mob-nav-meet");
+const mobNavContact = document.querySelector("#mob-nav-contact");
 
 const mobileToggle = document.querySelector('.mobile-nav-burger');
 const mobileNav = document.querySelector('.mobile-nav');
