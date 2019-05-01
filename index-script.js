@@ -90,3 +90,33 @@ galleryImages.forEach((image)=>{
 lightboxContainer.addEventListener('click', () => {
     lightboxContainer.classList.remove('open');
 });
+
+//// lazy load gallery images ////
+
+  var lazyImagesOld = document.querySelectorAll("img.gallery-image.lazy");
+  var lazyImages = [].slice.call(document.querySelectorAll("img.gallery-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    console.log("no intesection observer in browser")
+    setTimeout(()=>{
+      lazyImages.forEach(image => {
+        image.src = image.dataset.src;
+        image.classList.remove("lazy");
+      })
+    }, 3000)
+  }

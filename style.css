@@ -265,7 +265,7 @@ p {
   width: auto;
   height: 280px;
   object-fit: contain;
-  filter: brightness(75%);
+  filter: brightness(75%) blur(0);
   transition: filter 0.3s;
   border-radius: 3px;
 }
@@ -477,6 +477,10 @@ p {
 
 .faded {
   opacity: 0;
+}
+
+.lazy {
+  filter: blur(100px);
 }
 
 @media only screen and (min-width: 980px) and (max-width: 1100px) {
