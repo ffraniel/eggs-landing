@@ -15,15 +15,12 @@ var app = new Vue({
       if (this.displayActive === false) {
         this.displayActive = true;
       };
-      // add fade out
       this.isFaded = true;
-      //make changes after animation
       setTimeout(() => {
         this.selectedBreed = selected;
         this.displayTitle = this.breeds[selected].breed;
         this.displayText = this.breeds[selected].details;
         this.displayImage = this.breeds[selected].img;
-        // remove fade out
         this.isFaded = false;
       }, 200);
     }
