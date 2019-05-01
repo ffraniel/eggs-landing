@@ -637,19 +637,18 @@ p {
     border-radius: 3px;
     height: 40px;
     width: 40px;
-    background-color: darkgray;
     transition: background-color 0.25s;
   }
 
   .mobile-nav-burger:hover {
-    background-color:  rgb(175, 175, 175);
+    background-color:  rgba(175, 175, 175, 0.5);
   }
 
   .mobile-nav-burger span {
-    border: 1px white solid;
+    border: 2px var(--textBlack) solid;
     border-radius: 10px;
     width: 50%;
-    margin: 20% auto;
+    margin: 15% auto;
     display: block;
   }
 
