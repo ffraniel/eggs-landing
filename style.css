@@ -35,10 +35,8 @@ p {
 }
 
 .container-contact {
-  height: 100vh;
   transform: translate(0);
   transition: transform 1s;
-
 }
 
 .container-offscreen {
@@ -289,6 +287,10 @@ p {
   position: relative;
 }
 
+.container-contact .footer {
+  position: relative;
+}
+
 .footer-nav {
   padding: 0 100px;
 }
@@ -464,11 +466,17 @@ p {
 
 .contact-details {
   font-weight: 300;
+  font-size: 1rem;
+  width: 75%;
 }
 
 .contact-box > * {
-  max-width: 80%;
   margin: 15px auto;
+}
+
+.contact-chicken {
+  width: 550px;
+  filter: grayscale(100%);
 }
 
 .slide-out {
@@ -772,9 +780,15 @@ p {
     border-radius: 5px;
     width: 300px;
     width: 75vw;
-    max-height: 65vh;
-    min-height: 45vh;
     padding: 20px 0;
+  }
+
+  .contact-box > * {
+    width: 100%;
+  }
+  .contact-chicken {
+    border: solid red 10px;
+    width: 200px;
   }
 }
 
