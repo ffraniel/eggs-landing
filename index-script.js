@@ -83,10 +83,12 @@ mobileToggle.addEventListener("click", () => {
 const galleryImages = document.querySelectorAll(".gallery-image");
 const lightboxContainer = document.querySelector(".lightbox-container");
 const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxText = document.querySelector(".lightbox-text");
 
 galleryImages.forEach(image => {
   image.addEventListener("click", () => {
     lightboxImage.src = image.src;
+    lightboxText.innerHTML = image.dataset.desc;
     lightboxContainer.classList.add("open");
   });
 });
