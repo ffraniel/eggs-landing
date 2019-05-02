@@ -79,23 +79,71 @@ mobileToggle.addEventListener("click", () => {
 });
 
 /// gallery lightbox ///
-
 const galleryImages = document.querySelectorAll(".gallery-image");
 const lightboxContainer = document.querySelector(".lightbox-container");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxText = document.querySelector(".lightbox-text");
+const leftArrow = document.querySelector(".left");
+const rightArrow = document.querySelector(".right");
+const lightbox = document.querySelector(".lightbox");
+const closeButton = document.querySelector(".close-button");
+let currentIndex;
+let openLightbox = false;
 
 galleryImages.forEach(image => {
   image.addEventListener("click", () => {
     lightboxImage.src = image.dataset.srchi;
     lightboxText.innerHTML = image.dataset.desc;
+    currentIndex = parseInt(image.dataset.index);
+    openLightbox = true;
     lightboxContainer.classList.add("open");
   });
 });
 
-lightboxContainer.addEventListener("click", () => {
+const galleryRight = () => { 
+  let nextIndex = currentIndex + 1;
+  galleryImages.forEach(image => {
+    if (parseInt(image.dataset.index) === nextIndex) {
+      lightboxImage.src = image.dataset.srchi;
+      lightboxText.innerHTML = image.dataset.desc;
+      currentIndex = parseInt(image.dataset.index);
+    };
+  });
+};
+
+const galleryLeft = () => { 
+  let lastIndex = currentIndex - 1;
+  galleryImages.forEach(image => {
+    if (parseInt(image.dataset.index) === lastIndex) {
+      lightboxImage.src = image.dataset.srchi;
+      lightboxText.innerHTML = image.dataset.desc;
+      currentIndex = parseInt(image.dataset.index);
+    };
+  });
+};
+
+const closeLightbox = () => {
   lightboxContainer.classList.remove("open");
+  openLightbox = false;
+};
+
+document.addEventListener("keydown", (e) => {
+  if (openLightbox) {
+    if (e.key === "ArrowLeft") {
+      galleryLeft();
+    } else if (e.key === "ArrowRight") {
+      galleryRight();
+    } else if (e.key === "Escape") {
+      lightboxContainer.classList.remove("open");
+      openLightbox = false;
+    };
+  };
 });
+
+rightArrow.addEventListener("click", galleryRight);
+leftArrow.addEventListener("click", galleryLeft);
+lightbox.addEventListener("click", closeLightbox);
+closeButton.addEventListener("click", closeLightbox);
 
 //// lazy load gallery images ////
 

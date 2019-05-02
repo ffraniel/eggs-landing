@@ -374,6 +374,25 @@ p {
   color: white;
 }
 
+.arrows {
+  font-size: 3rem;  
+  position: fixed;
+  color: var(--eggPink);
+  z-index: 5;
+}
+
+.arrows:hover {
+  color: white;
+}
+
+.left {
+  left: 1%;
+}
+
+.right {
+  right: 1%;
+}
+
 .meet-title {
   margin: 0;
   margin-top: 30px;
@@ -774,6 +793,10 @@ p {
   .lightbox-text {
     font-size: 0.6rem;
     left: 0px;
+  }
+
+  .arrows {
+    display: none;
   }
 
   .footer-nav {
