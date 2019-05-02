@@ -815,6 +815,9 @@ p {
 }
 
 @media only screen and (max-width: 480px) {
+  body {
+    border: 25px white solid;
+  }
   .image-overlay-text {
     top: 40px;
     font-size: 2.8rem;
@@ -871,5 +874,25 @@ p {
 @media only screen and (max-width: 430px) {
   .add-top {
     font-size: 2rem;
+  }
+  #card-slides {
+    padding: 0px;
+  }
+  .card {
+    padding: 4px;
+  }
+  .breed-selection-image {
+    width: 125px;
+    height: 125px;
+  }
+  .breed-selection {
+    border: solid red 1px;
+    padding: 2px;
+  }
+  .breed-name {
+    font-size: 1rem;
+  }
+  .breed-details {
+    font-size: 0.8rem;
   }
 }
