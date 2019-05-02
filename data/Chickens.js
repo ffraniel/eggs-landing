@@ -3,7 +3,7 @@ const Chickens = [
     index: 0,
     breed: "Araucana",
     img: "assets/ARAC2.jpg",
-    details: "The Araucana (Spanish: Gallina Mapuche) is a breed of domestic chicken from Chile. Its name derives from the Araucanía region of Chile where it is believed to have originated. It lays blue-shelled eggs, one of very few breeds that do so."
+    details: "The Araucana is a breed of domestic chicken from Chile. Its name derives from the Araucanía region of Chile where it is believed to have originated. It lays blue-shelled eggs, one of very few breeds that do so."
   },
   {
     index: 1,
@@ -33,6 +33,6 @@ const Chickens = [
     index: 5,
     breed: "Muscovy",
     img: "assets/MUSC.jpg",
-    details: "The Muscovy duck is one of the ‘greater wood ducks’, a title it shares with the white-winged wood duck and Hartlaub’s duck. These are heavy-bodied birds with relatively short legs that give them a horizontal carriage. They have broad wings with bony knobs at the carpal joints. Instead of quacking they make a distinct 'peep peep' noise."
+    details: "Muscovy ducks are the only domesticated duck not derived from the Mallard duck. Instead they are a very unique South American species that has been domesticated. They are very intelligent (by duck standards), and tend to be friendly and trusting personalities. Instead of quacking they make a distinct 'peep peep' noise and, on some occassions, hissing."
   }
 ];
