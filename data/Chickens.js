@@ -15,7 +15,7 @@ const Chickens = [
     index: 2,
     breed: "Marans",
     img: "assets/MARAN.jpeg",
-    details: "The Marans, French: Poule de Marans, is a breed of chicken from the port town of Marans, in the département of Charente-Maritime, in the Nouvelle-Aquitaine region of south-western France. It was created with the local feral chickens descended from fighting game chickens carried from Indonesia and India."
+    details: "The Marans is a breed of chicken from the port town of Marans, in the département of Charente-Maritime, in the Nouvelle-Aquitaine region of south-western France. It was created with the local feral chickens descended from fighting game chickens carried from Indonesia and India. Marans lay dark brown eggs."
   },
   {
     index: 3,
@@ -27,12 +27,12 @@ const Chickens = [
     index: 4,
     breed: "Little Brown Hen",
     img: "assets/LBH.jpg",
-    details: "Little Brown Hens are the regular, run of the mill, par for the course chicken about town. They can spin an egg or two, like a mellow life and don't kick up too much of a fuss."
+    details: "Little Brown Hens are the regular, run of the mill, par for the course chicken about town. They can spin an egg or two, they like a mellow life and they don't kick up too much of a fuss."
   },
   {
     index: 5,
     breed: "Muscovy",
     img: "assets/MUSC.jpg",
-    details: "It is allocated to a subgroup of perching ducks known as ‘the greater wood ducks’, which it shares with the white-winged wood duck and Hartlaub’s duck. These are heavy-bodied birds with relatively short legs that give them a horizontal carriage. They have broad wings with bony knobs at the carpal joints."
+    details: "The Muscovy duck is one of the ‘greater wood ducks’, a title it shares with the white-winged wood duck and Hartlaub’s duck. These are heavy-bodied birds with relatively short legs that give them a horizontal carriage. They have broad wings with bony knobs at the carpal joints. Instead of quacking they make a distinct 'peep peep' noise."
   }
 ];
