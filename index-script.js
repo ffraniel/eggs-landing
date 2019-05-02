@@ -87,7 +87,7 @@ const lightboxText = document.querySelector(".lightbox-text");
 
 galleryImages.forEach(image => {
   image.addEventListener("click", () => {
-    lightboxImage.src = image.src;
+    lightboxImage.src = image.dataset.srchi;
     lightboxText.innerHTML = image.dataset.desc;
     lightboxContainer.classList.add("open");
   });
