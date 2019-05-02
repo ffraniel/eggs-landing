@@ -490,6 +490,16 @@ p {
   filter: grayscale(100%);
 }
 
+.contact-map-link {
+  text-decoration: underline;
+  color: var(--eggPink);
+  font-weight: 700;
+}
+
+.contact-map-link:hover {
+  color: rgb(216, 240, 255);
+} 
+
 .slide-out {
   transform: translate(-100vw);
 }
