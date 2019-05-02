@@ -101,7 +101,7 @@ lightboxContainer.addEventListener("click", () => {
 
 var lazyImagesOld = document.querySelectorAll("img.gallery-image.lazy");
 var lazyImages = [].slice.call(
-  document.querySelectorAll("img.gallery-image.lazy")
+  document.querySelectorAll("img.lazy")
 );
 
 if ("IntersectionObserver" in window) {
