@@ -25,73 +25,70 @@
       <a class="close-nav" href="#">x</a>
     </nav>
     <nav class="nav" role="navigation">
-      <div class="primary-nav" aria-label="primary navigation">
+      <section class="primary-nav" aria-label="primary navigation">
         <a id="nav-home" href="index.html">Home</a>
         <a id="nav-meet" href="hens.html">Meet the Hens</a>
-      </div>
+      </section>
       <a class="nav-title-link" id="nav-title" href="index.html">Snicket Eggs</a>
-      <div class="secondary-nav" aria-label="secondary navigation">
+      <section class="secondary-nav" aria-label="secondary navigation">
         <a id="nav-contact" href="contact.html">Contact</a>
-      </div>
-      <div class="mobile-nav-burger">
+      </section>
+      <section class="mobile-nav-burger">
         <span></span>
         <span></span>
         <span></span>
-      </div>          
+      </section>          
     </nav>
-    <div class="container" id="home">
-      <div class="image-box"> 
+    <main class="container" id="home" role="main">
+      <section class="image-box"> 
         <img rel="preload" src="assets/eggs-cropped.jpg" alt="chicken eggs" class="egg-image" >
         <h1 class="image-overlay-text">Free range eggs from Addingham</h1>
-      </div>
-
-      <div class="detail-panel">
-        <div class="detail-panel-whitebox">
+      </section>
+      <section class="detail-panel">
+        <article class="detail-panel-whitebox">
           <h3 class="details-title">Free Range Eggs</h3>
           <p class="details">Jeannette keeps a variety of breeds of chickens and ducks, raising them on natural food in a beautiful setting in Addingham. They live a free range life, able to be outside throughout the day. We think this makes for the best eggs and, more importantly, gives the birds the best life.</p>
           <h5 class="price">6 eggs <span>£1.50</span></h5>
           <h5 class="price">12 eggs <span>£3</span></h5>
           <p class="contact">Contact Jeanette email Jeanette@eggs.com</p>
-          <div class="button-container">
+          <aside class="button-container">
             <a href="hens.html" id="meet-button" class="meet-button">Meet the Hens</a>
             <a href="contact.html" id="buy-button" class="meet-button">How to Buy</a>
-          </div>
-        </div>
-        <div class="image-container">
+          </aside>
+        </article>
+        <section class="image-container">
           <img src="assets/ducks-eating--low--blur.jpg" alt="ducks eating" class="smaller-image lazy" data-src="assets/ducks-eating--low.jpg">
-        </div>
-      </div>
-      <div class="image-box quote-image">
-        <img rel="preload" src="assets/LBH.jpg" alt="chicken profile" class="egg-image" >
+        </section>
+      </section>
+      <section class="image-box quote-image">
+        <img src="assets/LBH.jpg" alt="chicken profile" class="egg-image" >
         <h1 class="image-overlay-text add-top">“It’s so nice to walk down the snicket and see the ducks and hens outside everyday”</h1>
-      </div>
-      <div class="location">
+      </section>
+      <article class="location">
         <h3 class="location-title">Ova The Hills</h3>
         <p class="location-text">Situated on the river Wharfe and in the foot of the Yorkshire Dales Addingham is surrounded by stunning scenery. The village nestles on the side of the wharfe valley between Ilkley and Bolton Abbey. The surrounding hills and moorsides provide some considerable beauty and make it popular destination with visitors.</p>
-      </div>
-      <div class="gallery">
+      </article>
+      <section class="gallery">
         <h3 class="gallery-title">Gallery</h3>
-        <div class="gallery-image-box">
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/duck-walk.jpg" data-desc="Delia, champion worm catcher" >
-        </div>
-        <div class="gallery-image-box">
+        </section>
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/close-up-chicken.jpg" data-desc=" " >
-        </div>
-        <div class="gallery-image-box">
+        </section>
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/multi-chicken.jpg" data-desc="Lavender Aracunas lay blue eggs">
-        </div>
-
-        <div class="gallery-image-box">
+        </section>
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/ducks-eating.jpg" data-desc="Chico: Muscovey Drake, Delia: Muscovey, Puddleduck: Cherry Valley">
-        </div>
-        <div class="gallery-image-box">
+        </section>
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/duck-in-box.jpg" data-desc="Dora the Explorer" >
-        </div>
-        <div class="gallery-image-box">
+        </section>
+        <section class="gallery-image-box">
           <img class="gallery-image lazy" src="assets/ducks-eating--low--blur.jpg" alt="chickens in the coop" data-src="assets/brown-chicken.jpg" data-desc="Some hens have feathered feet" >
-        </div>
-      </div>
-      
+        </section>
+      </section>
       <footer class="footer">
         <nav class="footer-nav" role="footer navigation">
           <a class="footer-nav-link" href="index.html">Home</a>
@@ -100,16 +97,14 @@
         </nav>
         <a class="footer-nav-link webdev-link" href="https://franwebdev.uk/">Fran Whitehead<br>Web Dev</a>
       </footer>
-    </div>
-
-    <div class="lightbox-container">
+    </main>
+    <section class="lightbox-container">
       <h1 class="close-button">x</h1>
-      <div class="lightbox">
+      <figure class="lightbox">
         <img class="lightbox-image" src="" alt="chicekns in the coop">
         <p class="lightbox-text"></p>
-      </div>
-    </div>
-
+      </figure>
+    </section>
     <script src="index-script.js" async></script>
   </body>
 </html>
