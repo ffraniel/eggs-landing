@@ -276,7 +276,7 @@ p {
   background: #e9f3f7;
   width: 100%;
   min-height: 100px;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 .container .footer {
