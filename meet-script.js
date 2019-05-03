@@ -9,8 +9,6 @@ const navHome = document.getElementById('nav-home');
 const navMeet = document.getElementById('nav-meet');
 const navContact = document.getElementById('nav-contact');
 
-home.classList.remove('container-offscreen');
-
 const linkToHome = (e) => {
   e.preventDefault();
   home.classList.add('slide-out');
