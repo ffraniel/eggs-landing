@@ -99,8 +99,11 @@ galleryImages.forEach(image => {
     lightboxContainer.classList.add("open");
     const img = new Image();
     img.src = image.dataset.srchi;
+    img.dataset.index = currentIndex;
     img.onload = () => {
-     lightboxImage.src = image.dataset.srchi;
+      if(img.dataset.index == currentIndex) {
+        lightboxImage.src = image.dataset.srchi;
+      }
     };
   });
 });
@@ -114,8 +117,11 @@ const galleryRight = () => {
       currentIndex = parseInt(image.dataset.index);
       const img = new Image();
       img.src = image.dataset.srchi;
+      img.dataset.index = currentIndex;
       img.onload = () => {
-        lightboxImage.src = image.dataset.srchi;
+        if(img.dataset.index == currentIndex) {
+          lightboxImage.src = image.dataset.srchi;
+        }
       };
     };
   });
@@ -130,8 +136,11 @@ const galleryLeft = () => {
       currentIndex = parseInt(image.dataset.index);
       const img = new Image();
       img.src = image.dataset.srchi;
+      img.dataset.index = currentIndex;
       img.onload = () => {
-        lightboxImage.src = image.dataset.srchi;
+        if(img.dataset.index == currentIndex) {
+          lightboxImage.src = image.dataset.srchi;
+        }
       };
     };
   });
