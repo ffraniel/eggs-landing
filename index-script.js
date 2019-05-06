@@ -97,9 +97,11 @@ galleryImages.forEach(image => {
     currentIndex = parseInt(image.dataset.index);
     openLightbox = true;
     lightboxContainer.classList.add("open");
-    setTimeout(()=>{
-      lightboxImage.src = image.dataset.srchi;
-    }, 500);
+    const img = new Image();
+    img.src = image.dataset.srchi;
+    img.onload = () => {
+     lightboxImage.src = image.dataset.srchi;
+    };
   });
 });
 
@@ -109,10 +111,12 @@ const galleryRight = () => {
     if (parseInt(image.dataset.index) === nextIndex) {
       lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
-      setTimeout(()=>{
-        lightboxImage.src = image.dataset.srchi;
-      }, 500);
       currentIndex = parseInt(image.dataset.index);
+      const img = new Image();
+      img.src = image.dataset.srchi;
+      img.onload = () => {
+        lightboxImage.src = image.dataset.srchi;
+      };
     };
   });
 };
@@ -123,10 +127,12 @@ const galleryLeft = () => {
     if (parseInt(image.dataset.index) === lastIndex) {
       lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
-      setTimeout(()=>{
-        lightboxImage.src = image.dataset.srchi;
-      }, 500);
       currentIndex = parseInt(image.dataset.index);
+      const img = new Image();
+      img.src = image.dataset.srchi;
+      img.onload = () => {
+        lightboxImage.src = image.dataset.srchi;
+      };
     };
   });
 };
