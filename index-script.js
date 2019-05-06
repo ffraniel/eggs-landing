@@ -97,7 +97,9 @@ galleryImages.forEach(image => {
     currentIndex = parseInt(image.dataset.index);
     openLightbox = true;
     lightboxContainer.classList.add("open");
-    lightboxImage.src = image.dataset.srchi;
+    setTimeout(()=>{
+      lightboxImage.src = image.dataset.srchi;
+    }, 500);
   });
 });
 
@@ -107,7 +109,9 @@ const galleryRight = () => {
     if (parseInt(image.dataset.index) === nextIndex) {
       lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
-      lightboxImage.src = image.dataset.srchi;
+      setTimeout(()=>{
+        lightboxImage.src = image.dataset.srchi;
+      }, 500);
       currentIndex = parseInt(image.dataset.index);
     };
   });
@@ -119,7 +123,9 @@ const galleryLeft = () => {
     if (parseInt(image.dataset.index) === lastIndex) {
       lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
-      lightboxImage.src = image.dataset.srchi;
+      setTimeout(()=>{
+        lightboxImage.src = image.dataset.srchi;
+      }, 500);
       currentIndex = parseInt(image.dataset.index);
     };
   });
