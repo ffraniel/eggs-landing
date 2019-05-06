@@ -92,11 +92,12 @@ let openLightbox = false;
 
 galleryImages.forEach(image => {
   image.addEventListener("click", () => {
-    lightboxImage.src = image.dataset.srchi;
+    lightboxImage.src = image.dataset.src;
     lightboxText.innerHTML = image.dataset.desc;
     currentIndex = parseInt(image.dataset.index);
     openLightbox = true;
     lightboxContainer.classList.add("open");
+    lightboxImage.src = image.dataset.srchi;
   });
 });
 
@@ -104,8 +105,9 @@ const galleryRight = () => {
   let nextIndex = currentIndex + 1;
   galleryImages.forEach(image => {
     if (parseInt(image.dataset.index) === nextIndex) {
-      lightboxImage.src = image.dataset.srchi;
+      lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
+      lightboxImage.src = image.dataset.srchi;
       currentIndex = parseInt(image.dataset.index);
     };
   });
@@ -115,8 +117,9 @@ const galleryLeft = () => {
   let lastIndex = currentIndex - 1;
   galleryImages.forEach(image => {
     if (parseInt(image.dataset.index) === lastIndex) {
-      lightboxImage.src = image.dataset.srchi;
+      lightboxImage.src = image.dataset.src;
       lightboxText.innerHTML = image.dataset.desc;
+      lightboxImage.src = image.dataset.srchi;
       currentIndex = parseInt(image.dataset.index);
     };
   });
