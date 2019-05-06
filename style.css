@@ -176,6 +176,10 @@ p {
   filter: brightness(100%);
 }
 
+.image-container {
+  overflow: hidden;
+}
+
 .detail-panel-whitebox p {
   font-size: 0.9rem;
   margin: 0 auto;
