@@ -15,12 +15,13 @@ var app = new Vue({
             snippet.length = 30;
             snippet.push("...");
             snippet = snippet.join(" ");
-
           } else {
             snippet = snippetSplit.push("...").join(" ");
           };
           item.snippet = snippet;
           item.expanded = false;
+          let dateObj = new Date(item._createdAt);
+          item.dateString = dateObj.toDateString();
           return item;
         })
         this.blogPosts = resultWithSnippet;
