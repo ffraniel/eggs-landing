@@ -42,18 +42,15 @@
     </nav>
 
     <main class="container-blog" id="blog">
-      <h1 class="blog-title">News</h1>
+      <h1 class="blog-page-title">News</h1>
 
-      <section class="blog-list" id="blog-list">
-        <article class="blog-preview" v-for="post in blogPosts">
+      <section v-cloak class="blog-list" id="blog-list">
+        <article class="blog-item" v-for="post in blogPosts">
           <h3 class="blog-title">{{post.title}}</h3>
-          <p class="blog-date">{{post._createdAt}}</p>
-          <!-- if post not expanded show snippet -->
-          <p class="blog-text blog-text-preview">{{post.snippet}}</p>
-          <!-- if expanded show full post -->
-
-          <!-- if post not expanded show expand button and vice versa -->
-          <button class="expand-button" v-on:click="expand(post._id)">Read more</button>
+          <p class="blog-date">{{post.dateString}}</p>
+          <p v-show="post.expanded === false" class="blog-text blog-text-preview">{{post.snippet}}</p>
+          <p v-show="post.expanded === true" v-for="body of post.body" class="blog-text" >{{body.children[0].text}}</p>
+          <button class="blog-expand-button" v-on:click="expand(post._id)">{{post.expanded ? 'Less' : 'More'}}</button>
         </article>
       </section>
 

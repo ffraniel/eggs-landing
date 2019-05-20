@@ -497,6 +497,59 @@ p {
   font-size: 0.9rem;
 }
 
+[v-cloak] { display: none; }
+
+.container-blog {
+  animation: fadein 1s;
+  margin-top: 30px;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.blog-page-title {
+  color: var(--eggPink);
+  font-size: 2.5rem;
+}
+
+.blog-list {
+  animation: fadein 1s;
+}
+
+.blog-item {
+  font-weight: 400;
+  color: var(--textBlack);
+}
+
+.blog-title {}
+
+.blog-date {
+
+}
+
+.blog-text {
+
+
+}
+
+.blog-text-preview {
+}
+
+.blog-expand-button {
+  background-color: var(--eggPink);
+  background-color: #8ddaff;
+  color:rgb(250, 243, 243);
+  border: none;
+  border-radius: 2px;
+  padding: 3px 10px;
+  margin: 0;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.blog-expand-button:hover {
+  background-color:  rgba(175, 175, 175, 0.5);
+}
+
 .contact-box {
   color: rgb(14, 14, 14);
   padding: 20px 0;
