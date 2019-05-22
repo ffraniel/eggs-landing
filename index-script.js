@@ -5,6 +5,7 @@ const home =
   document.getElementById("contact-page");
 const meet = document.getElementById("meet");
 const contact = document.getElementById("contact");
+
 const meetButton = document.getElementById("meet-button");
 const findOutBuy = document.getElementById("buy-button");
 
