@@ -40,9 +40,36 @@ var app = new Vue({
       });
       this.blogPosts = newBlogPostsState;
     },
+    imageUrlMaker: function (url, h, w) {
+      let baseURL = 'https://cdn.sanity.io/images/ksrgjbn5/news/';
+      let fileType = url.slice(-3);
+      var regexImage = /image-/gi;
+      let main = url.replace(regexImage, '').split("").slice(0, -4).join("");
+      let height;
+      let width;
+      if (h || w) {
+        height = h || null;
+        width = w || null;
+      }
+      if (height) {
+        height = `h=${height}`;
+      }
+      if (width) {
+        width = `h=${width}`;
+      }
+      var imageString = baseURL + main + '.' + fileType;
+      if (height) {
+        imageString += `?${height}`;
+      }
+      if (width) {
+        imageString += `?${width}`;
+      }
+      return imageString;
+    },
     debug: function (event) {
+      // let string = event.asset._ref;
+      // console.log(this.imageUrlMaker(string))
       console.log(event)
     }
-
   }
 });

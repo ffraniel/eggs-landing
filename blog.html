@@ -49,12 +49,12 @@
           <h3 class="blog-title">{{post.title}}</h3>
           <p class="blog-date">{{post.dateString}}</p>
           <p v-show="post.expanded === false" class="blog-text blog-text-preview">{{post.snippet}}</p>
-          <section class="blog-text-container" v-show="post.expanded === true" v-for="bodyItem of post.body">
-            <!-- if section image show image block -->
-            <p class="blog-text" v-if="bodyItem._type === 'image'" v-on:click="debug(bodyItem)">image</p>
-            <!-- <img class="blog-image" v-if="bodyItem._type === image" src= /> -->
-            <!-- if section text show text block -->
-            <p class="blog-text" v-if="bodyItem._type === 'block'" v-on:click="debug(bodyItem)">{{bodyItem.children[0].text}}</p>
+          <section v-show="post.expanded === true" class="blog-text-container" v-on:click="debug(post.mainImage._type)">
+            <img v-if="post.mainImage && post.mainImage._type === 'image'" class="blog-main-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 800)' v-bind:alt='post.title'>
+            <section class="blog-block-iterator" v-for="bodyItem of post.body">
+              <img class="blog-image" v-if="bodyItem._type === 'image'" v-bind:src='imageUrlMaker(bodyItem.asset._ref, 500)' />
+              <p class="blog-text" v-if="bodyItem._type === 'block'" v-on:click="debug(bodyItem)">{{bodyItem.children[0].text}}</p>
+            </section>
           </section>
           <button class="blog-expand-button" v-on:click="expand(post._id)">{{post.expanded ? 'Less' : 'More'}}</button>
         </article>

@@ -551,6 +551,16 @@ p {
   background-color:  rgb(123, 176, 255);
 }
 
+.blog-main-image {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.blog-image {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .contact-box {
   color: rgb(14, 14, 14);
   padding: 20px 0;
