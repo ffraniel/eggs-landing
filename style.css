@@ -520,14 +520,15 @@ p {
   color: var(--textBlack);
 }
 
-.blog-title {}
+.blog-title {
+  text-shadow: 0 3px 4px 4px black;
+}
 
 .blog-date {
 
 }
 
 .blog-text {
-
 
 }
 
@@ -547,7 +548,7 @@ p {
 }
 
 .blog-expand-button:hover {
-  background-color:  rgba(175, 175, 175, 0.5);
+  background-color:  rgb(123, 176, 255);
 }
 
 .contact-box {

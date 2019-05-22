@@ -39,6 +39,10 @@ var app = new Vue({
         return post;
       });
       this.blogPosts = newBlogPostsState;
+    },
+    debug: function (event) {
+      console.log(event)
     }
+
   }
 });
