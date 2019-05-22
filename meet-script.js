@@ -28,11 +28,9 @@ const linkToMeet = (e) => {
 };
 
 const linkToBlog = e => {
-  console.log("to the blog")
   e.preventDefault();
   home.classList.add("slide-out");
   setTimeout(() => {
-    console.log("to the blog")
     window.location.href = navBlog.href;
   }, 1000);
 };
