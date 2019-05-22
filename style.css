@@ -8,6 +8,7 @@ body {
 :root {
   --eggPink: #fcac91;
   --textBlack: rgba(24, 22, 22, 0.925);
+  --eggBlue: #8ddaff;
 }
 
 p {
@@ -509,10 +510,13 @@ p {
 .blog-page-title {
   color: var(--eggPink);
   font-size: 2.5rem;
+  margin: 50px 0 0 0;
 }
 
 .blog-list {
   animation: fadein 1s;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .blog-item {
@@ -521,7 +525,7 @@ p {
 }
 
 .blog-title {
-  text-shadow: 0 3px 4px 4px black;
+  font-size: 1.5rem;
 }
 
 .blog-date {
@@ -537,7 +541,7 @@ p {
 
 .blog-expand-button {
   background-color: var(--eggPink);
-  background-color: #8ddaff;
+  background-color: var(--eggBlue);
   color:rgb(250, 243, 243);
   border: none;
   border-radius: 2px;
@@ -549,6 +553,8 @@ p {
 
 .blog-expand-button:hover {
   background-color:  rgb(123, 176, 255);
+  background-color: var(--eggPink);
+
 }
 
 .blog-main-image {
