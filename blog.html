@@ -48,7 +48,10 @@
         <article class="blog-item" v-for="post in blogPosts">
           <h3 class="blog-title">{{post.title}}</h3>
           <p class="blog-date">{{post.dateString}}</p>
-          <p v-show="post.expanded === false" class="blog-text blog-text-preview">{{post.snippet}}</p>
+          <section v-show="post.expanded === false" class="blog-preview-container">
+            <p class="blog-text blog-text-preview">{{post.snippet}}</p>
+            <img v-if="post.mainImage && post.mainImage._type === 'image'" class="preview-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 60)' v-bind:alt='post.title' >
+          </section>
           <section v-show="post.expanded === true" class="blog-text-container" v-on:click="debug(post.mainImage._type)">
             <img v-if="post.mainImage && post.mainImage._type === 'image'" class="blog-main-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 800)' v-bind:alt='post.title'>
             <section class="blog-block-iterator" v-for="bodyItem of post.body">
