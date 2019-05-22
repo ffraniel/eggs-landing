@@ -529,7 +529,7 @@ p {
 }
 
 .blog-text {
-
+  animation: fadein 0.5s;
 }
 
 .blog-text-preview {
@@ -552,13 +552,17 @@ p {
 }
 
 .blog-main-image {
+  display: block;
   width: 75%;
   margin: 0 auto;
+  animation: fadein 0.5s;
 }
 
 .blog-image {
+  display: block;
   width: 50%;
   margin: 0 auto;
+  animation: fadein 0.5s;
 }
 
 .contact-box {
@@ -681,6 +685,12 @@ p {
     max-width: 280px;
     height: 280px;
     border-radius: 1%;
+  }
+  .blog-main-image {
+    width: 100%;
+  }
+  .blog-image {
+    width: 75%;
   }
 }
 
