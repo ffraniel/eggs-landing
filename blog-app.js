@@ -4,19 +4,28 @@ var app = new Vue({
     blogPosts: []
   },
   mounted: function () {
-    return fetch ('https://ksrgjbn5.api.sanity.io/v1/data/query/news?query=*[_type == "post"]')
+    return fetch ('https://ksrgjbn5.api.sanity.io/v1/data/query/news?query=*[_type == "post"]| order(_createdAt desc)')
       .then(resBuff => resBuff.json())
       .then(res => {
         let resultWithSnippet = res.result.map(item => {
-          let snippetSplit = item.body[0].children[0].text.split(" ");
+          let arrayOfBlocks = item.body;
+          let firstTextBlock;
+          for (var i = 0; i < arrayOfBlocks.length; i ++) {
+            if (arrayOfBlocks[i]._type === "block" && typeof firstTextBlock === 'undefined') {
+              firstTextBlock = arrayOfBlocks[i];
+            }
+          };
+          let snippetSplit = firstTextBlock.children[0].text.split(" ");
           let snippet;
           if (snippetSplit.length > 30) {
             snippet = snippetSplit;
             snippet.length = 30;
-            snippet.push("...");
+            snippet.push(". . .");
             snippet = snippet.join(" ");
           } else {
-            snippet = snippetSplit.push("...").join(" ");
+            snippet = snippetSplit;
+            snippet.push(". . .");
+            snippet = snippet.join(" ");
           };
           item.snippet = snippet;
           item.expanded = false;
@@ -70,10 +79,8 @@ var app = new Vue({
         return imageString; 
       }
     },
-    debug: function (event) {
-      // let string = event.asset._ref;
-      // console.log(this.imageUrlMaker(string))
-      console.log(event)
+    debug: function (event, text) {
+      console.log(text, event)
     }
   }
 });

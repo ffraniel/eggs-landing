@@ -52,12 +52,12 @@
           <p class="blog-date">{{post.dateString}}</p>
           <section v-show="post.expanded === false" class="blog-preview-container">
             <p class="blog-text blog-text-preview">{{post.snippet}}</p>
-            <img v-if="post.mainImage && post.mainImage._type === 'image'" class="preview-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 80)' v-bind:alt='post.title' >
+            <img v-if="post.mainImage && post.mainImage.asset && post.mainImage.asset._ref && post.mainImage._type === 'image'" class="preview-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 80)' v-bind:alt='post.title' >
           </section>
           <section v-show="post.expanded === true" class="blog-text-container">
-            <img v-if="post.mainImage && post.mainImage._type === 'image'" class="blog-main-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 800)' v-bind:alt='post.title'>
+            <img v-if="post.mainImage && post.mainImage.asset && post.mainImage.asset._ref && post.mainImage._type === 'image'" class="blog-main-image" v-bind:src='imageUrlMaker(post.mainImage.asset._ref, 800)' v-bind:alt='post.title'>
             <section class="blog-block-iterator" v-for="bodyItem of post.body">
-              <img class="blog-image" v-if="bodyItem._type === 'image'" v-bind:src='imageUrlMaker(bodyItem.asset._ref, 500)' />
+              <img v-if="bodyItem._type === 'image' && bodyItem.asset && bodyItem.asset._ref" class="blog-image" v-bind:src='imageUrlMaker(bodyItem.asset._ref, 500)' />
               <p class="blog-text" v-if="bodyItem._type === 'block'">{{bodyItem.children[0].text}}</p>
             </section>
           </section>
@@ -78,9 +78,9 @@
     </footer>
     
     <!-- dev -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> 
     <!-- live -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>  -->
 
     <script src="blog-script.js" ></script>
     <script src="blog-app.js"></script>
