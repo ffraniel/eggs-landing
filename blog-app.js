@@ -55,16 +55,20 @@ var app = new Vue({
         height = `h=${height}`;
       }
       if (width) {
-        width = `h=${width}`;
+        width = `w=${width}`;
       }
       var imageString = baseURL + main + '.' + fileType;
+
       if (height) {
         imageString += `?${height}`;
-      }
-      if (width) {
+        if (width) {
+          imageString += `&${width}`
+        }
+        return imageString;
+      } else if (width) {
         imageString += `?${width}`;
+        return imageString; 
       }
-      return imageString;
     },
     debug: function (event) {
       // let string = event.asset._ref;
