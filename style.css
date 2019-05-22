@@ -967,6 +967,11 @@ p {
     height: 180px;
   }
 
+  .container-blog {
+    max-width: 100%;
+  }
+
+
   .contact-box {
     border-radius: 5px;
     width: 300px;
