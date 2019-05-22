@@ -559,21 +559,15 @@ p {
 .blog-item {
   font-weight: 400;
   color: var(--textBlack);
+  border-bottom: solid 3px rgba(240, 234, 234, 0.3);
 }
 
 .blog-title {
   font-size: 1.5rem;
 }
 
-.blog-date {
-
-}
-
 .blog-text {
   animation: fadein 0.5s;
-}
-
-.blog-text-preview {
 }
 
 .blog-expand-button {
@@ -583,7 +577,7 @@ p {
   border: none;
   border-radius: 2px;
   padding: 3px 10px;
-  margin: 0;
+  margin: 0 0 20px 0;
   font-size: 1rem;
   transition: background-color 0.2s;
 }
@@ -813,6 +807,15 @@ p {
   .breed-selection-image {
     max-width: 230px;
     height: 230px;
+  }
+  .blog-preview-container {
+    display: block;
+  }
+  .preview-image {
+    display: none;
+  }
+  .blog-item {
+    border-bottom: none;
   }
 }
 
