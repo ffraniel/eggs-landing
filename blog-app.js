@@ -77,7 +77,9 @@ var app = new Vue({
       } else if (width) {
         imageString += `?${width}`;
         return imageString; 
-      }
+      } else {
+        return imageString;
+      };
     },
     debug: function (event, text) {
       console.log(text, event)
