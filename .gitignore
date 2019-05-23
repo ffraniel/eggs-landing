@@ -1,2 +1,4 @@
 snicketeggs/node_modules
 snicketeggs/dist
+.netlify
+netlify.toml
