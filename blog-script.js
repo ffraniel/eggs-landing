@@ -12,11 +12,9 @@ const navBlog = document.getElementById('nav-blog');
 const navContact = document.getElementById('nav-contact');
 
 const linkToHome = (e) => {
-  console.log("added slid eout")
   e.preventDefault();
   home.classList.add('slide-out');
   setTimeout(() => {
-    console.log("done sliding out")
     window.location.href = navHome.href;
   }, 1000);
 };
