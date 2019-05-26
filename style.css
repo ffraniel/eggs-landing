@@ -598,7 +598,7 @@ p {
 .blog-image {
   display: block;
   width: 50%;
-  margin: 0 auto;
+  margin: 20px auto;
   animation: fadein 0.5s;
 }
 
