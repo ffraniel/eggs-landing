@@ -63,6 +63,8 @@
           </section>
           <button class="blog-expand-button" v-on:click="expand(post._id)">{{post.expanded ? 'Less' : 'More'}}</button>
         </article>
+        <button class="blog-more-posts" v-if="(currentFetch + 2) < totalNumberOfPosts" v-on:click="fetchPosts(currentFetch)" >SEE OLDER POSTS</button>
+        <p class="end-of-posts" v-if="(currentFetch + 2) >= totalNumberOfPosts" >No more blogs to see</p>
       </section>
 
     </main>

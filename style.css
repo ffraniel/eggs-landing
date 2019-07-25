@@ -585,7 +585,27 @@ p {
 .blog-expand-button:hover {
   background-color:  rgb(123, 176, 255);
   background-color: var(--eggPink);
+}
 
+.blog-more-posts {
+  display: block;
+  background-color: #71dc83;
+  transition: background-color 0.25s;
+  color: rgb(250, 243, 243);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 20px auto;
+  font-size: 1rem;
+}
+
+.blog-more-posts:hover {
+  background-color: #99f5a8;
+}
+
+.end-of-posts {
+  text-align: center;
+  font-weight: 700;
 }
 
 .blog-main-image {
